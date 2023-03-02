@@ -1,16 +1,10 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.get('/', (req, res) => {
+const router = require("./routes/routes")
 
-})
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+app.use("/api", router)
 
-app.post('/user', (req, res) => {
-
-})
-
-app.get('/user', () => {
-
-})
-
-app.listen(5000, () => console.log('server up, @port:5000:'))
+app.listen(5000, () => console.log('server up, @port:5000:'));

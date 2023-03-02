@@ -2,8 +2,7 @@ CREATE DATABASE IF NOT EXISTS `hospital_db`;
 
 USE `hospital_db`;
 
-DROP TABLE IF EXISTS ``;
-
+DROP TABLE IF EXISTS `User`;
 
 CREATE TABLE `User` (
     `user_id` INT NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -17,6 +16,8 @@ CREATE TABLE `User` (
     -- `medical_record_number` VARCHAR(255)  TODO: FOREIGN KEY
 );
 
+DROP TABLE IF EXISTS `Facility`;
+
 CREATE TABLE `Facility` (
     `facility_id` INT NOT NULL PRIMARY KEY AUTOINCREMENT,
     `facility_name` VARCHAR(255) NOT NULL,
@@ -24,6 +25,8 @@ CREATE TABLE `Facility` (
     -- `address_id` TODO: FOREIGN KEY
 
 );
+
+DROP TABLE IF EXISTS `FacilityAddress`;
 
 CREATE TABLE `FacilityAddress` (
     `facility_address_id` INT NOT NULL PRIMARY KEY AUTOINCREMENT,
